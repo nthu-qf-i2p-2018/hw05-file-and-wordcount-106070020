@@ -12,12 +12,13 @@ def main(filename):
     for line in lines:
         # split a line of text into a list words
         # "I have a dream." => ["I", "have", "a", "dream."]
+        line= line.strip()
         words = line.split()
 
         # check the format of words and append it to "all_words" list
         for word in words:
             word = word.strip(string.punctuation)
-            if word != " " :
+            if word != "" :
                 all_words.append(word)
                 
     # compute word count from all_words
